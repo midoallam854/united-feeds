@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&display=swap');
+
+/* Default font for English */
+body {
+  font-family: 'Roboto', sans-serif; /* Assuming Roboto for English */
+}
+
+/* Primary background color */
+.primary {
+  background-color: #78B833;
+}
+
+/* Primary text color with underline */
+.textPrimary {
+  color: #78B833;
+  text-decoration: underline;
+  text-decoration-color: #78B833;
+}
+
+/* Banner background */
+.banner-background {
+  @apply w-full h-[500px] bg-cover bg-center bg-no-repeat relative;
+  background-image: url('../assets/wheat1.png');
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Arabic font and RTL adjustments */
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Tajawal', 'Noto Sans Arabic', sans-serif;
+}
+
+/* Improve readability for Arabic text */
+.rtl h1, .rtl h2, .rtl h3, .rtl p, .rtl li {
+  line-height: 1.8; /* Increased line spacing for Arabic */
+}
+
+/* Adjust list styling for RTL */
+.rtl ol, .rtl ul {
+  padding-right: 1.5rem; /* Padding on the right for RTL */
+  padding-left: 0;
+}
+
+/* Adjust list item markers for RTL */
+.rtl ol li, .rtl ul li {
+  position: relative;
+  padding-right: 1rem; /* Space for the marker */
+}
+
+/* Ensure proper alignment for nested lists in RTL */
+.rtl ul li::before {
+  right: 0;
+  left: auto;
+}
+
+/* Background overlay for better text contrast */
+.bg-overlay {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .rtl h1 {
+    font-size: 1.75rem; /* Smaller heading on mobile */
+  }
+  .rtl h2 {
+    font-size: 1.5rem;
+  }
+  .rtl p, .rtl li {
+    font-size: 0.95rem; /* Slightly smaller text on mobile */
+  }
+  .banner-background {
+    height: 300px; /* Adjust banner height for mobile */
+  }
+}
