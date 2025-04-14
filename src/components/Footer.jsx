@@ -226,9 +226,9 @@ const Footer = ({ language = 'en' }) => {
           <div className="flex flex-col gap-3">
             <h1 className="font-bold text-xl text-gray-700">{translations[language].account}</h1>
             <div className="flex flex-col gap-1">
-              <p className="text-base text-gray-500 cursor-pointer">{translations[language].profile}</p>
-              <p className="text-base text-gray-500 cursor-pointer">{translations[language].orders}</p>
-              <p className="text-base text-gray-500 cursor-pointer">{translations[language].favorites}</p>
+             <a href="/profile"> <p className="text-base text-gray-500 cursor-pointer">{translations[language].profile}</p> </a>
+              <a href="/cart"><p className="text-base text-gray-500 cursor-pointer">{translations[language].orders}</p></a>
+             <a href="/favorites"><p className="text-base text-gray-500 cursor-pointer">{translations[language].favorites}</p></a>
             </div>
           </div>
 

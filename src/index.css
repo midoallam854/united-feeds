@@ -21,8 +21,7 @@ body {
 /* Banner background */
 .banner-background {
   @apply w-full h-[500px] bg-cover bg-center bg-no-repeat relative;
-  background-image: url('../assets/wheat1.png');
-}
+  background-image: url('/assets/wheat1.png');}
 
 /* Hide scrollbar */
 .scrollbar-hide::-webkit-scrollbar {

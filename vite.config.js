@@ -10,4 +10,8 @@ export default defineConfig({
     strictPort: true, // Ensures Vite fails if port 3000 is in use instead of switching to another port
     host: true, // Allows external access (e.g., from other devices on the network, optional)
   },
+  build: {
+    outDir: 'build',
+  },
 });
+
